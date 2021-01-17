@@ -69,14 +69,24 @@ body {
     z-index: -1;
 }
 .footer {
-
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-/* Vertically center the text there */
-  background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Vertically center the text there */
+    background-color: rgba(252, 188, 15, 1);
 }
 
+.navbar-brand {
+    background-color: #FCBC0F;
+    padding: 15px;
+    border-radius: 25%;
+}
 
-
+main{
+    background-color: rgba(255,255,255,0.9);
+    min-height: 70vh;
+    padding: 2%;
+    border: 1px dotted black;
+    margin-top: 4%;
+}

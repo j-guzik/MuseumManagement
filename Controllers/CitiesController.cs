@@ -22,8 +22,7 @@ namespace MuseumManagement.Controllers
         // GET: Cities
         public async Task<IActionResult> Index()
         {
-            var museumManagementContext = _context.City.Include(c => c.Country);
-            return View(await museumManagementContext.ToListAsync());
+            return View(await _context.City.ToListAsync());
         }
 
         // GET: Cities/Details/5
@@ -35,7 +34,6 @@ namespace MuseumManagement.Controllers
             }
 
             var city = await _context.City
-                .Include(c => c.Country)
                 .FirstOrDefaultAsync(m => m.IdCity == id);
             if (city == null)
             {
@@ -48,7 +46,6 @@ namespace MuseumManagement.Controllers
         // GET: Cities/Create
         public IActionResult Create()
         {
-            ViewData["CountryId"] = new SelectList(_context.Set<Country>(), "IdCountry", "CountryName");
             return View();
         }
 
@@ -57,7 +54,7 @@ namespace MuseumManagement.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdCity,CityName,CountryId")] City city)
+        public async Task<IActionResult> Create([Bind("IdCity,CityName")] City city)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +62,6 @@ namespace MuseumManagement.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CountryId"] = new SelectList(_context.Set<Country>(), "IdCountry", "CountryName", city.CountryId);
             return View(city);
         }
 
@@ -82,7 +78,6 @@ namespace MuseumManagement.Controllers
             {
                 return NotFound();
             }
-            ViewData["CountryId"] = new SelectList(_context.Set<Country>(), "IdCountry", "CountryName", city.CountryId);
             return View(city);
         }
 
@@ -91,7 +86,7 @@ namespace MuseumManagement.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdCity,CityName,CountryId")] City city)
+        public async Task<IActionResult> Edit(int id, [Bind("IdCity,CityName")] City city)
         {
             if (id != city.IdCity)
             {
@@ -118,7 +113,6 @@ namespace MuseumManagement.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CountryId"] = new SelectList(_context.Set<Country>(), "IdCountry", "CountryName", city.CountryId);
             return View(city);
         }
 
@@ -131,7 +125,6 @@ namespace MuseumManagement.Controllers
             }
 
             var city = await _context.City
-                .Include(c => c.Country)
                 .FirstOrDefaultAsync(m => m.IdCity == id);
             if (city == null)
             {

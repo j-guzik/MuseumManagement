@@ -18,7 +18,6 @@ namespace MuseumManagement.Data
 
         public DbSet<MuseumManagement.Models.City> City { get; set; }
 
-        public DbSet<MuseumManagement.Models.Country> Country { get; set; }
 
         public DbSet<MuseumManagement.Models.Exhibition> Exhibition { get; set; }
 

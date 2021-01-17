@@ -16,9 +16,5 @@ namespace MuseumManagement.Models
         [StringLength(50, ErrorMessage = "Nazwa nie może być dłuższa niż 50 znaków.")]
         public string CityName { get; set; }
 
-        [Display(Name = "ID kraju")]
-        public int CountryId { get; set; }
-
-        public Country Country { get; set; }
     }
 }
