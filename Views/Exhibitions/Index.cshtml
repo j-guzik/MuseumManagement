@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MuseumManagement.Models.Exhibition>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ExhibitionName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Museum)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExhibitionName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Museum.MuseumName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdExhibition">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdExhibition">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdExhibition">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
