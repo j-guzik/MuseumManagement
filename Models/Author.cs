@@ -11,21 +11,16 @@ namespace MuseumManagement.Models
         [Key]
         public int IdAuthor { get; set; }
 
-        [Required(ErrorMessage = "Prosze podac imię autora!")]
-        [Display(Name = "Imię autora")]
+        [Required(ErrorMessage = "Proszę podać imię twórcy!")]
+        [Display(Name = "Imię")]
         [StringLength(30, ErrorMessage = "Imię nie może być dłuższe niż 30 znaków.")]
         public string AuthorName { get; set; }
 
-        [Required(ErrorMessage = "Prosze podac nazwisko autora!")]
-        [Display(Name = "Nazwisko autora")]
+        [Required(ErrorMessage = "Proszę podać nazwisko twórcy!")]
+        [Display(Name = "Nazwisko")]
         [StringLength(50, ErrorMessage = "Nazwisko nie może być dłuższe niż 50 znaków.")]
         public string AuthorSurname { get; set; }
 
-        [DataType(DataType.Date)]
-        public DateTime BornDate { get; set; }
-
-        [DataType(DataType.Date)]
-        public DateTime DeathDate { get; set; }
 
     }
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MuseumManagement.Data;
 
 namespace MuseumManagement.Migrations
 {
     [DbContext(typeof(MuseumManagementContext))]
-    partial class MuseumManagementContextModelSnapshot : ModelSnapshot
+    [Migration("20210117220112_2")]
+    partial class _2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -35,6 +37,12 @@ namespace MuseumManagement.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
+
+                    b.Property<DateTime>("BornDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DeathDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("IdAuthor");
 
@@ -67,8 +75,8 @@ namespace MuseumManagement.Migrations
 
                     b.Property<string>("ExhibitionName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(100)")
-                        .HasMaxLength(100);
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.Property<int>("MuseumId")
                         .HasColumnType("int");
@@ -162,8 +170,8 @@ namespace MuseumManagement.Migrations
 
                     b.Property<string>("MuseumName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(100)")
-                        .HasMaxLength(100);
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
 
                     b.HasKey("IdMuseum");
 

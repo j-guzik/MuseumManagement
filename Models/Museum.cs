@@ -11,12 +11,12 @@ namespace MuseumManagement.Models
         [Key]
         public int IdMuseum { get; set; }
 
-        [Required(ErrorMessage = "Prosze podac kraj!")]
-        [Display(Name = "Kraj")]
-        [StringLength(50, ErrorMessage = "Nazwa nie może być dłuższa niż 50 znaków.")]
+        [Required(ErrorMessage = "Proszę podać nazwę muzeum!")]
+        [Display(Name = "Muzeum")]
+        [StringLength(100, ErrorMessage = "Nazwa nie może być dłuższa niż 100 znaków.")]
         public string MuseumName { get; set; }
 
-        [Display(Name = "ID miasta")]
+        [Display(Name = "Miasto")]
         public int CityId { get; set; }
 
         public City City { get; set; }

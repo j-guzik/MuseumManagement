@@ -11,7 +11,7 @@ namespace MuseumManagement.Models
         [Key]
         public int IdCity { get; set; }
 
-        [Required(ErrorMessage = "Prosze podac nazwę miasta!")]
+        [Required(ErrorMessage = "Proszę podać nazwę miasta!")]
         [Display(Name = "Miasto")]
         [StringLength(50, ErrorMessage = "Nazwa nie może być dłuższa niż 50 znaków.")]
         public string CityName { get; set; }

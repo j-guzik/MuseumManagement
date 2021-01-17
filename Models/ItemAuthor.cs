@@ -11,12 +11,12 @@ namespace MuseumManagement.Models
         [Key]
         public int IdItemAuthor { get; set; }
 
-        [Display(Name = "ID eksponatu")]
+        [Display(Name = "Eksponat")]
         public int ItemId { get; set; }
 
         public Item Item { get; set; }
 
-        [Display(Name = "ID autora")]
+        [Display(Name = "Twórca")]
         public int AuthorId { get; set; }
 
         public Author Author { get; set; }
