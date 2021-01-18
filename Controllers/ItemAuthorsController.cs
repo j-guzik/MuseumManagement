@@ -49,7 +49,7 @@ namespace MuseumManagement.Controllers
         // GET: ItemAuthors/Create
         public IActionResult Create()
         {
-            ViewData["AuthorId"] = new SelectList(_context.Author, "IdAuthor", "AuthorName");
+            ViewData["AuthorId"] = new SelectList(_context.Author, "IdAuthor", "AuthorSurname");
             ViewData["ItemId"] = new SelectList(_context.Item, "IdItem", "ItemName");
             return View();
         }
@@ -67,7 +67,7 @@ namespace MuseumManagement.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AuthorId"] = new SelectList(_context.Author, "IdAuthor", "AuthorName", itemAuthor.AuthorId);
+            ViewData["AuthorId"] = new SelectList(_context.Author, "IdAuthor", "AuthorSurname", itemAuthor.AuthorId);
             ViewData["ItemId"] = new SelectList(_context.Item, "IdItem", "ItemName", itemAuthor.ItemId);
             return View(itemAuthor);
         }
@@ -85,7 +85,7 @@ namespace MuseumManagement.Controllers
             {
                 return NotFound();
             }
-            ViewData["AuthorId"] = new SelectList(_context.Author, "IdAuthor", "AuthorName", itemAuthor.AuthorId);
+            ViewData["AuthorId"] = new SelectList(_context.Author, "IdAuthor", "AuthorSurname", itemAuthor.AuthorId);
             ViewData["ItemId"] = new SelectList(_context.Item, "IdItem", "ItemName", itemAuthor.ItemId);
             return View(itemAuthor);
         }
@@ -122,7 +122,7 @@ namespace MuseumManagement.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AuthorId"] = new SelectList(_context.Author, "IdAuthor", "AuthorName", itemAuthor.AuthorId);
+            ViewData["AuthorId"] = new SelectList(_context.Author, "IdAuthor", "AuthorSurname", itemAuthor.AuthorId);
             ViewData["ItemId"] = new SelectList(_context.Item, "IdItem", "ItemName", itemAuthor.ItemId);
             return View(itemAuthor);
         }

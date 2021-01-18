@@ -16,7 +16,7 @@
                 @Html.DisplayNameFor(model => model.MuseumName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.City)
+               Miasto
             </th>
             <th></th>
         </tr>
@@ -31,9 +31,9 @@
                 @Html.DisplayFor(modelItem => item.City.CityName)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdMuseum">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdMuseum">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdMuseum">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdMuseum">Edytuj</a> |
+                <a asp-action="Details" asp-route-id="@item.IdMuseum">Szczegóły</a> | |
+                <a asp-action="Delete" asp-route-id="@item.IdMuseum">Usuń</a>
             </td>
         </tr>
 }

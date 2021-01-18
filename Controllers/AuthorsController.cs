@@ -54,7 +54,7 @@ namespace MuseumManagement.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdAuthor,AuthorName,AuthorSurname")] Author author)
+        public async Task<IActionResult> Create([Bind("IdAuthor,AuthorSurname,AuthorName")] Author author)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace MuseumManagement.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdAuthor,AuthorName,AuthorSurname")] Author author)
+        public async Task<IActionResult> Edit(int id, [Bind("IdAuthor,AuthorSurname,AuthorName")] Author author)
         {
             if (id != author.IdAuthor)
             {

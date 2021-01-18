@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Gdzie przebywają eksponaty?</h1>
+<h1>Gdzie znajdują się eksponaty?</h1>
 
 <p>
     <a asp-action="Create">Dodaj</a>
@@ -13,10 +13,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Item)
+                Eksponat
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Exhibition)
+                Wystawa
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.TimeFrom)
@@ -43,9 +43,9 @@
                 @Html.DisplayFor(modelItem => item.TimeTo)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdLocation">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdLocation">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdLocation">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdLocation">Edytuj</a> |
+                <a asp-action="Details" asp-route-id="@item.IdLocation">Szczegóły</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdLocation">Usuń</a>
             </td>
         </tr>
 }

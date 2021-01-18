@@ -4,9 +4,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Utwórz</h1>
 
-<h4>Location</h4>
+<h4>Gdzie znajduje się eksponat?</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -14,11 +14,11 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ItemId" class="control-label"></label>
-                <select asp-for="ItemId" class ="form-control" asp-items="ViewBag.ItemId"></select>
+                <select asp-for="ItemId" class="form-control" asp-items="ViewBag.ItemId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="ExhibitionId" class="control-label"></label>
-                <select asp-for="ExhibitionId" class ="form-control" asp-items="ViewBag.ExhibitionId"></select>
+                <select asp-for="ExhibitionId" class="form-control" asp-items="ViewBag.ExhibitionId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="TimeFrom" class="control-label"></label>
@@ -31,14 +31,14 @@
                 <span asp-validation-for="TimeTo" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Dodaj" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Wróć do listy</a>
 </div>
 
 @section Scripts {

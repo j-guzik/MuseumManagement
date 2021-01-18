@@ -13,10 +13,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Item)
+                Eksponat
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Author)
+                Twórca
             </th>
             <th></th>
         </tr>
@@ -28,12 +28,12 @@
                 @Html.DisplayFor(modelItem => item.Item.ItemName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Author.AuthorName)
+                @Html.DisplayFor(modelItem => item.Author.AuthorSurname)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdItemAuthor">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdItemAuthor">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdItemAuthor">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdItemAuthor">Edytuj</a> |
+                <a asp-action="Details" asp-route-id="@item.IdItemAuthor">Szczegóły</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdItemAuthor">Usuń</a>
             </td>
         </tr>
 }
