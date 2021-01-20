@@ -4,7 +4,7 @@
     ViewData["Title"] = "Rejestracja";
     Layout = "~/Areas/Identity/Pages/_AuthLayout.cshtml";
 }
-<form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+<form asp-route-returnUrl="@Model.ReturnUrl" method="post" style="padding: 20px">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="row">
         <div class="col-md-6">
@@ -45,7 +45,7 @@
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary">Zarejestruj</button>
+    <button type="submit" class="btn btn-primary" style="margin-left: 183px; margin-top: 15px; padding: 13px">Zarejestruj</button>
 </form>
 
 @section Scripts {
