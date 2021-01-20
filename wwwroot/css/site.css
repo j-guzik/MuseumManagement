@@ -82,6 +82,7 @@ body {
     background-color: #FCBC0F;
     padding: 15px;
     border-radius: 25%;
+    font-size: 18px;
 }
 
 main{
@@ -90,4 +91,8 @@ main{
     padding: 2%;
     border: 1px dotted black;
     margin-top: 4%;
+}
+
+.container .user {
+    border-bottom: 3px solid #179ecf;
 }
