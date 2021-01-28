@@ -75,7 +75,8 @@ body {
     width: 100%;
     white-space: nowrap;
     /* Vertically center the text there */
-    background-color: rgba(252, 188, 15, 1);
+    color: black !important;
+    background-color: #fcbc0f;
 }
 
 .navbar-brand {

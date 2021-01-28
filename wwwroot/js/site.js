@@ -5,7 +5,7 @@
 
 // Some random colors
 
-const colors = ["#179ecf", "#122eff", "#1fffec", "#fa9511", "#fff700"];
+const colors = ["#0366d6", "#adb9ba", "#1fffec", "#fa9511", "#fff700"];
 
 const numBalls = 50;
 const balls = [];
